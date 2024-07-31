@@ -1,5 +1,5 @@
-class IImages {
-  IImages._();
+class TImages {
+  TImages._();
 
   // App logo
   static const String dartAppLogo = "assets/images/logo.png";

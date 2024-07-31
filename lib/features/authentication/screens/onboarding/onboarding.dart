@@ -1,8 +1,8 @@
 import 'package:bai_tap_lon/features/authentication/controllers/onboarding.dart';
-import 'package:bai_tap_lon/features/authentication/screens/widgets/onboarding_dot_navigation.dart';
-import 'package:bai_tap_lon/features/authentication/screens/widgets/onboarding_next_button.dart';
-import 'package:bai_tap_lon/features/authentication/screens/widgets/onboarding_page.dart';
-import 'package:bai_tap_lon/features/authentication/screens/widgets/onboarding_skip.dart';
+import 'package:bai_tap_lon/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:bai_tap_lon/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
+import 'package:bai_tap_lon/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
+import 'package:bai_tap_lon/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
 import 'package:bai_tap_lon/utils/constants/image_strings.dart';
 import 'package:bai_tap_lon/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';

@@ -14,18 +14,20 @@ class OnBoardingNextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunction.isDartMode(context);
     return Positioned(
-        right: TSizes.defaultSpace,
-        bottom: TDeviceUntility.getButtonNavigationHeight(),
-        child: ElevatedButton(
-          onPressed: () => OnBoardingController.instance.nextPage(),
-          style: ElevatedButton.styleFrom(
-            shape: const CircleBorder(),
-            backgroundColor: dark ? TColors.primary : Colors.black,
-          ),
-          child: const Icon(
-            Icons.arrow_right,
-            color: TColors.primary,
-          ),
-        ));
+      right: TSizes.defaultSpace,
+      bottom: TDeviceUntility.getButtonNavigationHeight(),
+      child: ElevatedButton(
+        onPressed: () => OnBoardingController.instance.nextPage(),
+        style: ElevatedButton.styleFrom(
+          shape: const CircleBorder(),
+          backgroundColor:
+              dark ? TColors.primary : const Color.fromARGB(255, 183, 65, 19),
+        ),
+        child: const Icon(
+          Icons.arrow_right,
+          color: TColors.primary,
+        ),
+      ),
+    );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:bai_tap_lon/features/authentication/controllers/onboarding.dart';
 import 'package:bai_tap_lon/utils/constants/sizes.dart';
 import 'package:bai_tap_lon/utils/devices/device_untility.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class OnBoardingSkip extends StatelessWidget {
         top: TDeviceUntility.getAppBarHeight(),
         right: TSizes.defaultSpace,
         child: TextButton(
-          onPressed: () {},
+          onPressed: () => OnBoardingController.instance.skipPage(),
           child: const Text("Bỏ qua"),
         ));
   }

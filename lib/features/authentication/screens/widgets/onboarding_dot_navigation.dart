@@ -1,3 +1,4 @@
+import 'package:bai_tap_lon/features/authentication/controllers/onboarding.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
 import 'package:bai_tap_lon/utils/constants/sizes.dart';
 import 'package:bai_tap_lon/utils/devices/device_untility.dart';
@@ -12,17 +13,19 @@ class OnBoardingDotNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = OnBoardingController.instance;
     final dark = THelperFunction.isDartMode(context);
 
     return Positioned(
       bottom: TDeviceUntility.getButtonNavigationHeight() + 25,
       left: TSizes.defaultSpace,
       child: SmoothPageIndicator(
+        onDotClicked: controller.dotNavigatorClick,
         effect: ExpandingDotsEffect(
           activeDotColor: dark ? TColors.light : TColors.dart,
           dotHeight: 6,
         ),
-        controller: PageController(),
+        controller: controller.pageController,
         count: 3,
       ),
     );

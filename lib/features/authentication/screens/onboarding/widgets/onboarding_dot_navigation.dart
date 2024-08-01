@@ -20,13 +20,13 @@ class OnBoardingDotNavigation extends StatelessWidget {
       bottom: TDeviceUntility.getButtonNavigationHeight() + 25,
       left: TSizes.defaultSpace,
       child: SmoothPageIndicator(
+        count: 3,
+        controller: controller.pageController,
         onDotClicked: controller.dotNavigatorClick,
         effect: ExpandingDotsEffect(
           activeDotColor: dark ? TColors.light : TColors.dart,
           dotHeight: 6,
         ),
-        controller: controller.pageController,
-        count: 3,
       ),
     );
   }

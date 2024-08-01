@@ -26,6 +26,16 @@ class OnBoardingScreen extends StatelessWidget {
                 title: TTextString.onBoardingTitle1,
                 subtitle: TTextString.onBoardingSubtitle1,
               ),
+              OnBoardingPage(
+                image: TImages.logoOnboarding2,
+                title: TTextString.onBoardingTitle2,
+                subtitle: TTextString.onBoardingSubtitle2,
+              ),
+              OnBoardingPage(
+                image: TImages.logoOnboarding3,
+                title: TTextString.onBoardingTitle3,
+                subtitle: TTextString.onBoardingSubtitle3,
+              ),
             ],
           ),
           const OnBoardingSkip(),

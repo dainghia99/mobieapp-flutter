@@ -17,11 +17,17 @@ class OnBoardingPage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(TSizes.defaultSpace),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image(
-            image: AssetImage(image),
-            width: THelperFunction.screenWidth() * 0.8,
-            height: THelperFunction.screenHeight() * 0.6,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image(
+                image: AssetImage(image),
+                width: THelperFunction.screenWidth() * 0.8,
+                height: THelperFunction.screenHeight() * 0.5,
+              ),
+            ],
           ),
           Text(
             title,

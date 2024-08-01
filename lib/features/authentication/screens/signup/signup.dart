@@ -2,6 +2,7 @@ import 'package:bai_tap_lon/common/widgets/divider_login.dart';
 import 'package:bai_tap_lon/common/widgets/footer_login.dart';
 import 'package:bai_tap_lon/features/authentication/screens/signup/widgets/form_signup.dart';
 import 'package:bai_tap_lon/features/authentication/screens/signup/widgets/image_signup.dart';
+import 'package:bai_tap_lon/features/authentication/screens/signup/widgets/signup_button.dart';
 import 'package:bai_tap_lon/utils/constants/sizes.dart';
 import 'package:bai_tap_lon/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -33,16 +34,7 @@ class SignUpScreen extends StatelessWidget {
               const TFormSignUp(),
               const SizedBox(height: 10),
               // SignUp button
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Đăng ký",
-                    style: Theme.of(context).textTheme.bodyLarge,
-                  ),
-                ),
-              ),
+              const SignUpButton(),
               const SizedBox(
                 height: 10,
               ),

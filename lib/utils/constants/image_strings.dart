@@ -9,4 +9,8 @@ class TImages {
   static const String googleAppLogo = "assets/images/gmail.jpeg";
   static const String logoOnboarding2 = "assets/images/image2.png";
   static const String logoOnboarding3 = "assets/images/image3.jpeg";
+
+  // VerifiEmail
+  static const String verifyEmail = "assets/images/send_email.jpg";
+  static const String emailChecked = "assets/images/email_checked.webp";
 }

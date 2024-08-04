@@ -16,4 +16,8 @@ class TImages {
 
   // Reset password
   static const String resetPassword = "assets/images/reset_password.jpg";
+
+  // Appbar Main Application
+  static const String appBarMainApplication = "assets/images/appbar.jpg";
+  static const String appbarBaner = "assets/images/banner.jpeg";
 }

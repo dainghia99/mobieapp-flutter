@@ -13,4 +13,7 @@ class TImages {
   // VerifiEmail
   static const String verifyEmail = "assets/images/send_email.jpg";
   static const String emailChecked = "assets/images/email_checked.webp";
+
+  // Reset password
+  static const String resetPassword = "assets/images/reset_password.jpg";
 }

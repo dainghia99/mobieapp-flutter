@@ -1,3 +1,4 @@
+import 'package:bai_tap_lon/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:bai_tap_lon/features/authentication/screens/signup/signup.dart';
 import 'package:bai_tap_lon/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +59,7 @@ class TLoginForm extends StatelessWidget {
                 // Forgot password
                 TextButton(
                   child: const Text("Quên mật khẩu?"),
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const ForgetPassword()),
                 ),
                 const SizedBox(
                   height: TSizes.spaceBtwSections,

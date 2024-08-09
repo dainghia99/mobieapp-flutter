@@ -1,4 +1,5 @@
 import 'package:bai_tap_lon/appbar.dart';
+import 'package:bai_tap_lon/common/widgets/products/product_card_vertical.dart';
 import 'package:bai_tap_lon/containers/home_container.dart';
 import 'package:flutter/material.dart';
 
@@ -15,9 +16,13 @@ class Home extends StatelessWidget {
               color: Colors.blue,
               padding: const EdgeInsets.all(0),
               child: const Stack(
-                children: [TCircularContainer(), MainAppBar()],
+                children: [
+                  TCircularContainer(),
+                  MainAppBar(),
+                ],
               ),
-            )
+            ),
+            const TProductCardVertical()
           ],
         ),
       ),

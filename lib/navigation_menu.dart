@@ -36,8 +36,8 @@ class NavigationMenu extends StatelessWidget {
               label: "Tìm kiếm",
             ),
             NavigationDestination(
-              icon: Icon(CupertinoIcons.settings),
-              label: "Cài đặt",
+              icon: Icon(CupertinoIcons.heart),
+              label: "Yêu thích",
             ),
             NavigationDestination(
               icon: Icon(CupertinoIcons.profile_circled),

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class MainAppBar extends StatelessWidget {
   const MainAppBar({
     super.key,
-    this.title = "Chào Mừng Bạn Đến Với Thế Giới Cocktail",
+    this.title = "Chào Mừng Bạn Đến Với Thế Giới CockTail",
     this.description =
         "Cocktail là sự kết hợp tinh tế của hương vị và sáng tạo, mang đến trải nghiệm độc đáo và sảng khoái. Từ những hương vị cổ điển đến sáng tạo mới mẻ, cocktail luôn là lựa chọn hoàn hảo để tận hưởng và thư giãn trong không gian sang trọng và tinh tế.",
   });

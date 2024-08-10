@@ -22,7 +22,18 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
-            const TProductCardVertical()
+            GridView.builder(
+              itemCount: 4,
+              shrinkWrap: true,
+              padding: EdgeInsets.zero,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 16,
+                  crossAxisSpacing: 16,
+                  mainAxisExtent: 288),
+              itemBuilder: (_, index) => const TProductCardVertical(),
+            ),
           ],
         ),
       ),

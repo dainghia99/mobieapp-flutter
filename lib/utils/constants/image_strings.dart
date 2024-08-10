@@ -20,4 +20,5 @@ class TImages {
   // Appbar Main Application
   static const String appBarMainApplication = "assets/images/appbar.jpg";
   static const String appbarBaner = "assets/images/banner.jpeg";
+  static const String producImage1 = "assets/images/images1.jpeg";
 }

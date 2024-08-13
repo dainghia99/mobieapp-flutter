@@ -1,3 +1,5 @@
+import 'package:bai_tap_lon/features/account/screens/settings/setting.dart';
+import 'package:bai_tap_lon/features/shop/screens/favourite/favourite.dart';
 import 'package:bai_tap_lon/features/shop/screens/home/home.dart';
 import 'package:bai_tap_lon/features/shop/screens/search/search.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
@@ -59,11 +61,7 @@ class NavigationMenuController extends GetxController {
   final screens = [
     const Home(),
     const Search(),
-    Container(
-      color: Colors.purple,
-    ),
-    Container(
-      color: Colors.orange,
-    ),
+    const FavouriteScreen(),
+    const SettingScreen(),
   ];
 }

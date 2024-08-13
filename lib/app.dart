@@ -1,6 +1,6 @@
+import 'package:bai_tap_lon/features/account/controllers/theme_controller.dart';
 import 'package:bai_tap_lon/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
-import 'package:bai_tap_lon/utils/theme/theme.dart';
 import 'package:get/get.dart';
 
 class App extends StatelessWidget {
@@ -8,11 +8,16 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      themeMode: ThemeMode.system,
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.dartTheme,
-      home: const OnBoardingScreen(),
+    final ThemeController themeController = Get.put(ThemeController());
+
+    return Obx(
+      () => GetMaterialApp(
+        themeMode:
+            themeController.isDarkMode.value ? ThemeMode.dark : ThemeMode.light,
+        theme: ThemeData.light(),
+        darkTheme: ThemeData.dark(),
+        home: const OnBoardingScreen(),
+      ),
     );
   }
 }

@@ -67,13 +67,16 @@ class MainAppBar extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(
-              description!,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyLarge!
-                  .apply(color: Colors.white),
-              textAlign: TextAlign.center,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                description!,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyLarge!
+                    .apply(color: Colors.white),
+                textAlign: TextAlign.center,
+              ),
             ),
           )
         ],

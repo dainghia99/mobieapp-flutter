@@ -48,37 +48,40 @@ class SettingScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {},
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(left: 16),
-                    child: ClipOval(
-                      child: Image(
-                        image: AssetImage(TImages.user),
-                        width: 50,
-                        height: 50,
-                        fit: BoxFit.cover,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(left: 16),
+                      child: ClipOval(
+                        child: Image(
+                          image: AssetImage(TImages.user),
+                          width: 50,
+                          height: 50,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    width: 16,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Đại Nghĩa",
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      ),
-                      Text(
-                        "admin@gmail.com",
-                        style: Theme.of(context).textTheme.bodySmall,
-                      )
-                    ],
-                  )
-                ],
+                    const SizedBox(
+                      width: 16,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Đại Nghĩa",
+                          style: Theme.of(context).textTheme.headlineSmall,
+                        ),
+                        Text(
+                          "admin@gmail.com",
+                          style: Theme.of(context).textTheme.bodySmall,
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
             ListTile(

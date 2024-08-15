@@ -2,12 +2,14 @@ import 'package:bai_tap_lon/common/widgets/Icons/circular_icon.dart';
 import 'package:bai_tap_lon/common/widgets/products/product_title_text.dart';
 import 'package:bai_tap_lon/containers/rouned_container.dart';
 import 'package:bai_tap_lon/containers/rouned_image.dart';
+import 'package:bai_tap_lon/features/shop/screens/detail_products/detail_product.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
 import 'package:bai_tap_lon/utils/constants/image_strings.dart';
 import 'package:bai_tap_lon/utils/constants/sizes.dart';
 import 'package:bai_tap_lon/utils/helpers/helper_functions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key});
@@ -42,10 +44,13 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   // --Thumbnails Image --
-                  const Center(
-                    child: TRounedImage(
-                      imageUrl: TImages.producImage1,
-                      applyImageRadius: true,
+                  TextButton(
+                    onPressed: () => Get.to(const ProductDetail()),
+                    child: const Center(
+                      child: TRounedImage(
+                        imageUrl: TImages.producImage1,
+                        applyImageRadius: true,
+                      ),
                     ),
                   ),
 

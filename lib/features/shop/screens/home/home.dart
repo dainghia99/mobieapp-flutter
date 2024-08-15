@@ -18,14 +18,21 @@ class Home extends StatelessWidget {
               padding: const EdgeInsets.all(0),
               child: const Stack(
                 children: [
-                  TCircularContainer(),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: TCircularContainer(),
+                  ),
                   MainAppBar(),
                 ],
               ),
             ),
-            TGridLayout(
-              itemCount: 4,
-              itemBuilder: (_, index) => const TProductCardVertical(),
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TGridLayout(
+                itemCount: 4,
+                itemBuilder: (_, index) => const TProductCardVertical(),
+              ),
             )
           ],
         ),

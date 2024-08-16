@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "273987414414",
+    "project_id": "mobieappcocktail",
+    "storage_bucket": "mobieappcocktail.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273987414414:android:e802612662c60bba2f5cdf",
+        "android_client_info": {
+          "package_name": "com.example.bai_tap_lon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "273987414414-iajrp3qs4ss2j64vlgihctajpeau56o3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJSQLdUvHUfGQfx4MEN7lFDO1zAN1U7Gk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "273987414414-iajrp3qs4ss2j64vlgihctajpeau56o3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "273987414414-1spu97g868p8970gvboj3bbsap3mn5l8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.baiTapLon"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

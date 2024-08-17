@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1010123630805",
+    "project_id": "mobie-app-flutter",
+    "storage_bucket": "mobie-app-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010123630805:android:9dbc7f7982df5d56325a5c",
+        "android_client_info": {
+          "package_name": "com.example.bai_tap_lon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-PFUh8Y3ONXYzwCaTq0MTKvzCKG1-n7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

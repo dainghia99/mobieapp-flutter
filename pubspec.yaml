@@ -43,6 +43,8 @@ dependencies:
   get_storage: ^2.1.1
   flutter_native_splash: ^2.3.2
   smooth_page_indicator: ^1.2.0
+  firebase_auth: ^4.17.8
+  firebase_core: ^2.27.0
 
 dev_dependencies:
   flutter_test:

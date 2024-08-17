@@ -1,5 +1,7 @@
 import 'package:bai_tap_lon/features/account/controllers/theme_controller.dart';
+import 'package:bai_tap_lon/features/authentication/screens/login/login.dart';
 import 'package:bai_tap_lon/utils/constants/image_strings.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +11,14 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeController themeController = Get.find();
+    final User? user = FirebaseAuth.instance.currentUser;
+
+    Future<void> signOut() async {
+      await FirebaseAuth.instance.signOut();
+      // Chuyển người dùng về màn hình đăng nhập sau khi đăng xuất
+      Get.offAll(() =>
+          const LoginScreen()); // Thay thế bằng màn hình đăng nhập của bạn
+    }
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -25,24 +35,6 @@ class SettingScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
             ),
-            // Container(
-            //   width: 50,
-            //   height: 50,
-            //   decoration: const BoxDecoration(
-            //     borderRadius: BorderRadius.all(
-            //       Radius.elliptical(50, 50),
-            //     ),
-            //     image: DecorationImage(
-            //       image: AssetImage(TImages.user),
-            //       fit: BoxFit.cover,
-            //     ),
-            //   ),
-            //   child: const Image(
-            //     image: AssetImage(TImages.user),
-            //     width: 50,
-            //     height: 50,
-            //   ),
-            // ),
             const SizedBox(
               height: 16,
             ),
@@ -53,15 +45,22 @@ class SettingScreen extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.only(left: 16),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 16),
                       child: ClipOval(
-                        child: Image(
-                          image: AssetImage(TImages.user),
-                          width: 50,
-                          height: 50,
-                          fit: BoxFit.cover,
-                        ),
+                        child: user?.photoURL != null
+                            ? Image.network(
+                                user!.photoURL!,
+                                width: 50,
+                                height: 50,
+                                fit: BoxFit.cover,
+                              )
+                            : Image.asset(
+                                TImages.user,
+                                width: 50,
+                                height: 50,
+                                fit: BoxFit.cover,
+                              ),
                       ),
                     ),
                     const SizedBox(
@@ -71,15 +70,17 @@ class SettingScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Đại Nghĩa",
+                          user?.displayName ??
+                              "Không có tên", // Hiển thị tên người dùng
                           style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         Text(
-                          "admin@gmail.com",
+                          user?.email ??
+                              "Không có email", // Hiển thị email người dùng
                           style: Theme.of(context).textTheme.bodySmall,
-                        )
+                        ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -97,6 +98,11 @@ class SettingScreen extends StatelessWidget {
                   },
                 ),
               ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: signOut, // Gọi hàm đăng xuất khi nhấn nút
+              child: const Text('Đăng xuất'),
             ),
           ],
         ),

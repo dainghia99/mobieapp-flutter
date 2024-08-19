@@ -21,7 +21,7 @@ class FavouriteScreen extends StatelessWidget {
             children: [
               TGridLayout(
                 itemCount: 4,
-                itemBuilder: (_, index) => const TProductCardVertical(),
+                itemBuilder: (_, index) => const Center(),
               )
             ],
           ),

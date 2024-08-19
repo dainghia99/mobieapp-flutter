@@ -71,6 +71,7 @@ class _TFormSignUpState extends State<TFormSignUp> {
                 decoration: const InputDecoration(
                   labelText: "Tên tài khoản",
                   prefixIcon: Icon(Icons.supervised_user_circle_outlined),
+                  border: OutlineInputBorder(),
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -85,6 +86,7 @@ class _TFormSignUpState extends State<TFormSignUp> {
                 decoration: const InputDecoration(
                   labelText: "Email",
                   prefixIcon: Icon(Icons.email),
+                  border: OutlineInputBorder(),
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -101,6 +103,7 @@ class _TFormSignUpState extends State<TFormSignUp> {
                 decoration: const InputDecoration(
                   labelText: "Mật khẩu",
                   prefixIcon: Icon(Icons.key),
+                  border: OutlineInputBorder(),
                 ),
                 obscureText: true,
                 validator: (value) {
@@ -116,6 +119,7 @@ class _TFormSignUpState extends State<TFormSignUp> {
                 decoration: const InputDecoration(
                   labelText: "Nhập lại mật khẩu",
                   prefixIcon: Icon(Icons.key),
+                  border: OutlineInputBorder(),
                 ),
                 obscureText: true,
                 validator: (value) {

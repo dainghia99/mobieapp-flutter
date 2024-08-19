@@ -48,7 +48,7 @@ class Search extends StatelessWidget {
           ),
           TGridLayout(
             itemCount: 4,
-            itemBuilder: (_, index) => const TProductCardVertical(),
+            itemBuilder: (_, index) => const Center(),
           )
         ],
       ),

@@ -6,9 +6,13 @@ class ProductDetailDescription extends StatelessWidget {
   const ProductDetailDescription({
     super.key,
     required this.dark,
+    required this.description,
+    required this.price,
   });
 
   final bool dark;
+  final String description;
+  final double price;
 
   @override
   Widget build(BuildContext context) {
@@ -34,36 +38,36 @@ class ProductDetailDescription extends StatelessWidget {
             borderRadius: BorderRadius.circular(3),
             color: dark ? TColors.grey : TColors.white,
           ),
-          child: const Padding(
-            padding: EdgeInsets.all(16.0),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Thông tin chi tiết",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 Text(
-                  "Giá: 20\$",
+                  "Giá: ${price.toString()} VND",
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Mô tả: ",
                     ),
                     Flexible(
                       child: Text(
-                        "Đáajkdnbkajsndkjasdjkahskjdhakjsndkabscuhbsduvhehbvjqkewbrfueygrfvhjbeuyrybvherbvuerbvjhebrvuhbervhbdkvbmnasbdiabeknfbuưehbfuq3rbfnd vuqebrvjbeqruhvbjrehb",
+                        description,
                         maxLines: 4,
                       ),
                     ),

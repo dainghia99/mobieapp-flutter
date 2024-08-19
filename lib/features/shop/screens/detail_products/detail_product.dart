@@ -1,9 +1,15 @@
 import 'package:bai_tap_lon/features/shop/screens/detail_products/widgets/product_atributes.dart';
+import 'package:bai_tap_lon/features/shop/screens/home/models/product.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetail extends StatelessWidget {
-  const ProductDetail({super.key});
+  const ProductDetail({
+    super.key,
+    required this.product,
+  });
+
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +25,12 @@ class ProductDetail extends StatelessWidget {
           ),
         ),
       ),
-      body: const Column(
+      body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
-          TProductAtribute(),
+          TProductAtribute(product: product),
         ],
       ),
     );

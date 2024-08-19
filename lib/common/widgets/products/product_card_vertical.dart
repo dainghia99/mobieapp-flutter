@@ -3,8 +3,8 @@ import 'package:bai_tap_lon/common/widgets/products/product_title_text.dart';
 import 'package:bai_tap_lon/containers/rouned_container.dart';
 import 'package:bai_tap_lon/containers/rouned_image.dart';
 import 'package:bai_tap_lon/features/shop/screens/detail_products/detail_product.dart';
+import 'package:bai_tap_lon/features/shop/screens/home/models/product.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
-import 'package:bai_tap_lon/utils/constants/image_strings.dart';
 import 'package:bai_tap_lon/utils/constants/sizes.dart';
 import 'package:bai_tap_lon/utils/helpers/helper_functions.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,7 +12,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class TProductCardVertical extends StatelessWidget {
-  const TProductCardVertical({super.key});
+  const TProductCardVertical({super.key, required this.product});
+
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -45,10 +47,13 @@ class TProductCardVertical extends StatelessWidget {
                 children: [
                   // --Thumbnails Image --
                   TextButton(
-                    onPressed: () => Get.to(const ProductDetail()),
-                    child: const Center(
+                    onPressed: () => Get.to(ProductDetail(
+                      product: product,
+                    )),
+                    child: Center(
                       child: TRounedImage(
-                        imageUrl: TImages.producImage1,
+                        isNetworkImage: true,
+                        imageUrl: "http://localhost:5201${product.image}",
                         applyImageRadius: true,
                       ),
                     ),
@@ -92,8 +97,8 @@ class TProductCardVertical extends StatelessWidget {
                   const SizedBox(
                     height: 5,
                   ),
-                  const TProductTitleText(
-                    title: "Đây là phần miêu tả",
+                  TProductTitleText(
+                    title: product.name,
                     smallSize: true,
                     maxLines: 2,
                   ),
@@ -127,10 +132,10 @@ class TProductCardVertical extends StatelessWidget {
                     children: [
                       /// Price
                       Text(
-                        "\$40.5",
+                        "${product.price.toString()} VND",
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headlineMedium,
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                       Container(
                         decoration: const BoxDecoration(

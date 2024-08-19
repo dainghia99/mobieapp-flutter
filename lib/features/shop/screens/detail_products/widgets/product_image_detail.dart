@@ -1,4 +1,5 @@
 import 'package:bai_tap_lon/containers/rouned_container.dart';
+import 'package:bai_tap_lon/features/shop/screens/home/models/product.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
 import 'package:bai_tap_lon/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
@@ -7,9 +8,11 @@ class ImageProductDetail extends StatelessWidget {
   const ImageProductDetail({
     super.key,
     required this.dark,
+    required this.product,
   });
 
   final bool dark;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +37,8 @@ class ImageProductDetail extends StatelessWidget {
                 borderRadius: BorderRadius.circular(3),
                 color: dark ? TColors.grey : TColors.white,
               ),
-              child: Image.asset(
-                TImages.producImage1,
+              child: Image.network(
+                "http://localhost:5201${product.image}",
               ),
             ),
           ],

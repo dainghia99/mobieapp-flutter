@@ -3,7 +3,7 @@ import 'package:bai_tap_lon/features/shop/screens/detail_products/widgets/produc
 import 'package:bai_tap_lon/features/shop/screens/detail_products/widgets/product_image_detail.dart';
 import 'package:bai_tap_lon/features/shop/screens/detail_products/widgets/product_star.dart';
 import 'package:bai_tap_lon/features/shop/screens/detail_products/widgets/product_title.dart';
-import 'package:bai_tap_lon/features/shop/screens/home/models/product.dart';
+import 'package:bai_tap_lon/models/product.dart';
 import 'package:bai_tap_lon/utils/helpers/helper_functions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

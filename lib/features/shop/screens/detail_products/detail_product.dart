@@ -1,5 +1,5 @@
 import 'package:bai_tap_lon/features/shop/screens/detail_products/widgets/product_atributes.dart';
-import 'package:bai_tap_lon/features/shop/screens/home/models/product.dart';
+import 'package:bai_tap_lon/models/product.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,4 @@
-import 'package:bai_tap_lon/features/shop/screens/home/models/product.dart';
+import 'package:bai_tap_lon/models/product.dart';
 import 'package:bai_tap_lon/services/api_service.dart';
 import 'package:get/get.dart';
 

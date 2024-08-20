@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:bai_tap_lon/features/shop/screens/home/models/product.dart';
+import 'package:bai_tap_lon/models/product.dart';
 import 'package:http/http.dart' as http;
 
 Future<List<Product>> fetchProductsFromAPI() async {

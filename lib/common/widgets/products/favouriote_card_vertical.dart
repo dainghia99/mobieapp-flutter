@@ -3,7 +3,7 @@ import 'package:bai_tap_lon/containers/rouned_container.dart';
 import 'package:bai_tap_lon/containers/rouned_image.dart';
 import 'package:bai_tap_lon/features/shop/screens/detail_products/detail_product.dart';
 import 'package:bai_tap_lon/features/shop/screens/favourite/controllers/favourite_controller.dart';
-import 'package:bai_tap_lon/features/shop/screens/home/models/product.dart';
+import 'package:bai_tap_lon/models/product.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
 import 'package:bai_tap_lon/utils/constants/sizes.dart';
 import 'package:bai_tap_lon/utils/helpers/helper_functions.dart';

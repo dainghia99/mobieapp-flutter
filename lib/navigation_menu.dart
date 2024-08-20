@@ -2,6 +2,7 @@ import 'package:bai_tap_lon/features/account/screens/settings/setting.dart';
 import 'package:bai_tap_lon/features/shop/screens/favourite/favourite.dart';
 import 'package:bai_tap_lon/features/shop/screens/home/home.dart';
 import 'package:bai_tap_lon/features/shop/screens/search/search.dart';
+import 'package:bai_tap_lon/features/shop/screens/search/search_page.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
 import 'package:bai_tap_lon/utils/helpers/helper_functions.dart';
 import 'package:flutter/cupertino.dart';
@@ -60,7 +61,7 @@ class NavigationMenuController extends GetxController {
 
   final screens = [
     const Home(),
-    const Search(),
+    const SearchPage(),
     const FavouriteScreen(),
     const SettingScreen(),
   ];

@@ -1,5 +1,4 @@
 import 'package:bai_tap_lon/common/widgets/layouts/grid_layout.dart';
-import 'package:bai_tap_lon/common/widgets/products/product_card_vertical.dart';
 import 'package:bai_tap_lon/containers/home_container.dart';
 import 'package:flutter/material.dart';
 
@@ -35,9 +34,7 @@ class Search extends StatelessWidget {
                         ),
                         IconButton(
                           icon: const Icon(Icons.search),
-                          onPressed: () {
-                            // Handle search button click
-                          },
+                          onPressed: () {},
                         ),
                       ],
                     ),

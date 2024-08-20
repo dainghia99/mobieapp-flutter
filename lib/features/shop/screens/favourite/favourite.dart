@@ -1,5 +1,4 @@
 import 'package:bai_tap_lon/common/widgets/layouts/grid_layout.dart';
-import 'package:bai_tap_lon/common/widgets/products/product_card_vertical.dart';
 import 'package:flutter/material.dart';
 
 class FavouriteScreen extends StatelessWidget {

@@ -1,7 +1,6 @@
 import 'package:bai_tap_lon/containers/rouned_container.dart';
 import 'package:bai_tap_lon/features/shop/screens/home/models/product.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
-import 'package:bai_tap_lon/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 
 class ImageProductDetail extends StatelessWidget {

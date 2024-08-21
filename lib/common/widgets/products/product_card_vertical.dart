@@ -1,8 +1,8 @@
-import 'package:bai_tap_lon/common/widgets/Icons/circular_icon.dart';
 import 'package:bai_tap_lon/common/widgets/products/product_title_text.dart';
 import 'package:bai_tap_lon/containers/rouned_container.dart';
 import 'package:bai_tap_lon/containers/rouned_image.dart';
 import 'package:bai_tap_lon/features/shop/screens/detail_products/detail_product.dart';
+import 'package:bai_tap_lon/features/shop/screens/favourite/controllers/favourite_controller.dart';
 import 'package:bai_tap_lon/models/product.dart';
 import 'package:bai_tap_lon/utils/constants/colors.dart';
 import 'package:bai_tap_lon/utils/constants/sizes.dart';
@@ -12,12 +12,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class TProductCardVertical extends StatelessWidget {
-  const TProductCardVertical({super.key, required this.product});
-
   final Product product;
+
+  const TProductCardVertical({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
+    final FavoritesController favoritesController =
+        Get.put(FavoritesController());
+
     final dark = THelperFunction.isDartMode(context);
 
     return GestureDetector(
@@ -47,9 +50,7 @@ class TProductCardVertical extends StatelessWidget {
                 children: [
                   // --Thumbnails Image --
                   TextButton(
-                    onPressed: () => Get.to(ProductDetail(
-                      product: product,
-                    )),
+                    onPressed: () => Get.to(ProductDetail(product: product)),
                     child: Center(
                       child: TRounedImage(
                         isNetworkImage: true,
@@ -78,14 +79,29 @@ class TProductCardVertical extends StatelessWidget {
                     ),
                   ),
 
+                  // --Heart Icon --
                   Positioned(
                     top: 0,
                     right: 0,
-                    child: TCircularIcon(
-                      dark: dark,
-                      icon: CupertinoIcons.heart_fill,
-                      color: Colors.red,
-                    ),
+                    child: Obx(() {
+                      final isFavorite =
+                          favoritesController.isFavorite(product);
+                      return IconButton(
+                        icon: Icon(
+                          isFavorite
+                              ? CupertinoIcons.heart_fill
+                              : CupertinoIcons.heart,
+                          color: isFavorite ? Colors.red : Colors.grey,
+                        ),
+                        onPressed: () {
+                          if (isFavorite) {
+                            favoritesController.removeFromFavorites(product);
+                          } else {
+                            favoritesController.addToFavorites(product);
+                          }
+                        },
+                      );
+                    }),
                   ),
                 ],
               ),
@@ -94,17 +110,13 @@ class TProductCardVertical extends StatelessWidget {
               padding: const EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 children: [
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  const SizedBox(height: 5),
                   TProductTitleText(
                     title: product.name,
                     smallSize: true,
                     maxLines: 2,
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  const SizedBox(height: 5),
                   Row(
                     children: [
                       Text(
@@ -113,9 +125,7 @@ class TProductCardVertical extends StatelessWidget {
                         maxLines: 1,
                         style: Theme.of(context).textTheme.labelMedium,
                       ),
-                      const SizedBox(
-                        width: TSizes.xs,
-                      ),
+                      const SizedBox(width: TSizes.xs),
                       const Icon(
                         CupertinoIcons.checkmark_seal_fill,
                         color: TColors.primary,
@@ -123,19 +133,15 @@ class TProductCardVertical extends StatelessWidget {
                       )
                     ],
                   ),
-                  // const Spacer(),
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  const SizedBox(height: 5),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      /// Price
                       Text(
-                        "${product.price.toString()} VND",
+                        "\$${product.price}",
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.bodySmall,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Container(
                         decoration: const BoxDecoration(
